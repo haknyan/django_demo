@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>{% block title %}Base HTML{% endblock %}</title>
+    <style>
+        .link {
+            margin: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    {% block header %}
+    <p>
+        <span class="link"><a href="{% url 'landing:home' %}">Home</a></span>
+        <span class="link"><a href="{% url 'local:home' %}">Shops Near Me</a></span>
+        <span class="link"><a href="{% url 'accounts:login' %}">Login</a></span>
+        <span class="link"><a href="{% url 'accounts:sign-up' %}">Sign-Up</a></span>
+        <span class="link"><a href="{% url 'accounts:my-page' %}">My Page</a></span>
+        <span class="link"><a href="{% url 'payment:cart' %}">Cart</a></span>
+    </p>
+    {% endblock %}
+    {% block app_header %}
+    {% endblock %}
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
