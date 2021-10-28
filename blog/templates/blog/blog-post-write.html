@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Shop 1 Blog Post Write{% endblock %}
+{% block content %}
+<h1>Title Input Label</h1>
+<p>Content Input Label</p>
+<a href="{% url 'blog:home' 1 %}">Confirm</a>&nbsp;
+<a href="{% url 'blog:home' 1 %}">Go Back</a>
+{% endblock %}

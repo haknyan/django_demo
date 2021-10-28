@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Shop 1 Blog{% endblock %}
+{% block content %}
+<a href="{% url 'blog:post' 1 1 %}">Dummy Post Title</a>&nbsp;
+Actions:&nbsp;
+<a href="{% url 'blog:edit' 1 1 %}">Post Edit</a>&nbsp;
+<a href="{% url 'blog:delete' 1 1 %}">Post Delete</a>
+<div>
+    <a href="{% url 'blog:write' 1 %}">Write Post</a>
+</div>
+<div>
+    <a href="{% url 'shop:home' 1 %}">To Shop</a>&nbsp;
+    <a href="{% url 'local:home' %}">Go Find More Shops</a>
+</div>
+{% endblock %}
