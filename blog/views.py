@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 def shop_blog_home(request, blog_id):
     return render(request, "blog/blog-home.html")
 
